@@ -2,21 +2,24 @@ import { activitiesData } from "@/lib/data/activitiesData";
 import { featuresData } from "@/lib/data/featuresData";
 import { shortcutData } from "@/lib/data/shortcutData";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import Entypo from "@expo/vector-icons/Entypo";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Octicons from "@expo/vector-icons/Octicons";
-import React from "react";
+import React, { useState } from "react";
 import {
   Dimensions,
   FlatList,
   Image,
   ScrollView,
   Text,
+  TouchableOpacity,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
   const { width } = Dimensions.get("window");
+  const [hiddenBalance, setHiddenBalance] = useState(true);
   return (
     <SafeAreaView className="px-5 pt-6 pb-8 bg-[#F9F9F9] h-full">
       <View className="flex flex-row items-center justify-between pb-4">
@@ -49,21 +52,39 @@ const Home = () => {
           </View>
         </View>
 
-        <View className="mt-6 flex flex-row items-end rounded-lg">
-          <Text className="font-bold text-sm mr-1">₦</Text>
-          <Text className="font-bold text-3xl">250,000</Text>
-          <Text className="font-bold text-xs mb-[1px] ml-0.5">.46</Text>
-          <Octicons
-            name="eye-closed"
-            size={18}
-            color="#64748b"
-            className="ml-3"
-          />
+        <View className="mt-6 flex flex-row items-center rounded-lg">
+          {hiddenBalance ? (
+            <>
+              <Entypo name="dots-three-horizontal" size={32} color="#000000" />
+            </>
+          ) : (
+            <>
+              <Text className="font-bold text-sm mr-1">₦</Text>
+              <Text className="font-bold text-3xl">250,000</Text>
+              <Text className="font-bold text-xs mb-[1px] ml-0.5">.46</Text>
+            </>
+          )}
+          <TouchableOpacity onPress={() => setHiddenBalance((prev) => !prev)}>
+            <Octicons
+              name={hiddenBalance ? "eye-closed" : "eye"}
+              size={18}
+              color="#64748b"
+              className="ml-3"
+            />
+          </TouchableOpacity>
         </View>
 
-        <View className="pt-3 flex flex-row items-end gap-2 rounded-lg">
+        <View className="pt-3 flex flex-row gap-2 rounded-lg">
           <Text className="font-bold text-xs text-slate-500">Book balance</Text>
-          <Text className="font-bold text-xs text-slate-500">₦250,000.46</Text>
+          {hiddenBalance ? (
+            <>
+              <Entypo name="dots-three-horizontal" size={18} color="#64748b" />
+            </>
+          ) : (
+            <Text className="font-bold text-xs text-slate-500">
+              ₦250,000.46
+            </Text>
+          )}
         </View>
 
         <FlatList
