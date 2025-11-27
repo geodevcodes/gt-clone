@@ -18,23 +18,22 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const Home = () => {
   const { width } = Dimensions.get("window");
   return (
-    <SafeAreaView className="p-8 bg-[#F9F9F9] h-full">
+    <SafeAreaView className="px-5 pt-6 pb-8 bg-[#F9F9F9] h-full">
+      <View className="flex flex-row items-center justify-between pb-4">
+        <View className="flex flex-row justify-center items-center gap-2">
+          <View className="bg-gray-300 p-2 rounded-full">
+            <AntDesign name="user" size={16} color="gray" />
+          </View>
+          <Text className="text-base text-[#000000] font-semibold ">
+            Hello, Rasheed!
+          </Text>
+        </View>
+      </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 80 }}
       >
-        <View className="flex flex-row items-center justify-between">
-          <View className="flex flex-row justify-center items-center gap-2">
-            <View className="bg-gray-300 p-2 rounded-full">
-              <AntDesign name="user" size={16} color="gray" />
-            </View>
-            <Text className="text-base text-[#000000] font-semibold ">
-              Hello, Rasheed!
-            </Text>
-          </View>
-        </View>
-
-        <View className="flex flex-row items-center justify-between mt-6">
+        <View className="flex flex-row items-center justify-between mt-4">
           <View className="flex flex-row justify-center gap-2">
             <View className="border-[0.5px] border-gray-300 p-1 px-2 rounded-md flex items-center justify-center">
               <Text className="text-sm font-semibold text-slate-500">
