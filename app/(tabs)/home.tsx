@@ -117,7 +117,7 @@ const Home = () => {
                     <Image
                       source={item.imageUrl}
                       resizeMode="cover"
-                      className="w-full h-[120px] rounded-lg"
+                      className="w-full h-[120px] rounded-t-lg"
                     />
                   </View>
                   <View className="px-4">
