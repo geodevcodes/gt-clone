@@ -16,7 +16,7 @@ const Payments = () => {
 
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 80 }}
+        contentContainerStyle={{ paddingBottom: 120 }}
       >
         <View className="flex flex-col mt-4">
           {paymentData.map((item, index) => (

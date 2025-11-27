@@ -12,7 +12,7 @@ const Products = () => {
       </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 80 }}
+        contentContainerStyle={{ paddingBottom: 120 }}
       >
         <FlatList
           data={productsData}
