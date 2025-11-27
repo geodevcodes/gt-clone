@@ -16,7 +16,7 @@ const TabIcon = ({
   Icon: React.ReactNode;
   title: string;
 }) => (
-  <View className="flex-1 mt-1 flex flex-col items-center">
+  <View className="mt-3 items-center">
     {Icon}
     <Text
       className={`${
@@ -39,11 +39,11 @@ const TabsLayout = () => {
           tabBarInactiveTintColor: "#CDCDE0",
           tabBarShowLabel: false,
           tabBarStyle: {
-            backgroundColor: "#FFFFFF",
+            backgroundColor: "white",
             position: "absolute",
             borderTopColor: "#D1D1D6",
-            borderTopWidth: 1,
-            minHeight: 1,
+            borderTopWidth: 0.5,
+            minHeight: 70,
           },
         }}
       >
@@ -148,7 +148,7 @@ const TabsLayout = () => {
           }}
         />
       </Tabs>
-      <StatusBar backgroundColor="#000000" style="auto" />
+      <StatusBar backgroundColor="#ff6600" />
     </>
   );
 };
