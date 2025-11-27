@@ -1,27 +1,18 @@
 import { featuresData } from "@/lib/data/featuresData";
 import React from "react";
-import {
-  Dimensions,
-  FlatList,
-  Image,
-  ScrollView,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Products = () => {
-  const { width } = Dimensions.get("window");
   return (
-    <SafeAreaView className="p-8 bg-[#F9F9F9] h-full">
+    <SafeAreaView className="px-5 pt-6 pb-8">
+      <View className="flex flex-row items-center justify-between mb-6">
+        <Text className="text-black font-bold text-3xl">Products</Text>
+      </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 80 }}
       >
-        <View className="flex flex-row items-center justify-between mb-10">
-          <Text className="text-black font-bold text-3xl">Products</Text>
-        </View>
-
         <FlatList
           data={featuresData}
           showsHorizontalScrollIndicator={false}
