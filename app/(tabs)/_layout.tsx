@@ -148,7 +148,7 @@ const TabsLayout = () => {
           }}
         />
       </Tabs>
-      <StatusBar backgroundColor="#ff6600" />
+      <StatusBar style="auto" animated backgroundColor="#ff6600" />
     </>
   );
 };
