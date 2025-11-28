@@ -20,7 +20,7 @@ const EmptyState = ({
       <Image
         source={imageUrl}
         resizeMode="contain"
-        className="w-[250px] h-[195px]"
+        className="w-[240px] h-[185px]"
       />
       <Text className="text-center font-semibold text-2xl mt-6">{title}</Text>
       <Text className="text-center text-sm text-slate-500 mt-3 mb-2">
