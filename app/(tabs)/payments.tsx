@@ -26,7 +26,14 @@ const Payments = () => {
               className="flex flex-row items-center justify-between py-3"
             >
               <View className="flex flex-row items-center gap-3">
-                <View className="bg-gray-300 p-2 rounded-full">
+                <View
+                  style={{
+                    backgroundColor: item.bg,
+                    borderColor: item.borderColor,
+                    borderWidth: 1,
+                  }}
+                  className="p-3 rounded-full"
+                >
                   {item.icon}
                 </View>
                 <Text className="text-base font-rubik-medium text-gray-600">
