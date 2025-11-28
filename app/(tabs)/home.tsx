@@ -114,7 +114,14 @@ const Home = () => {
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <View className="flex flex-col justify-center items-center mr-5">
-                <View className="mb-3 bg-gray-300 rounded-full flex items-center justify-center w-16 h-16">
+                <View
+                  style={{
+                    backgroundColor: item.bg,
+                    borderColor: item.borderColor,
+                    borderWidth: 1,
+                  }}
+                  className="mb-3 rounded-full flex items-center justify-center w-16 h-16"
+                >
                   {item.icon}
                 </View>
                 <Text className="text-slate-500 text-base">{item.name}</Text>

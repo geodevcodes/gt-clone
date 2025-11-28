@@ -6,34 +6,42 @@ export const shortcutData = [
   {
     id: "nearme_1",
     name: "Near me",
-    icon: <FontAwesome6 name="location-crosshairs" size={24} color="#ff6600" />,
+    bg: "#FEE2E2",
+    borderColor: "#FCA5A5",
+    icon: <FontAwesome6 name="location-crosshairs" size={24} color="#DC2626" />,
   },
   {
     id: "byairtime_2",
     name: "Buy airtime",
+    bg: "#F3E8FF",
+    borderColor: "#DDD6FE",
     icon: (
-      <MaterialIcons name="signal-cellular-0-bar" size={24} color="#ff6600" />
+      <MaterialIcons name="signal-cellular-0-bar" size={24} color="#A855F7" />
     ),
   },
   {
     id: "buydata_3",
     name: "Buy data",
+    bg: "#E0F2FE",
+    borderColor: "#BAE6FD",
     icon: (
       <MaterialCommunityIcons
         name="wifi-strength-4"
         size={24}
-        color="#ff6600"
+        color="#0284C7"
       />
     ),
   },
   {
     id: "fxsales_4",
     name: "FX Sales",
+    bg: "#F3E8FF",
+    borderColor: "#DDD6FE",
     icon: (
       <MaterialCommunityIcons
         name="rotate-3d-variant"
         size={24}
-        color="black"
+        color="#A855F7"
       />
     ),
   },
