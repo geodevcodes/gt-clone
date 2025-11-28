@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
-import { SplashScreen, Stack } from "expo-router";
+import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "./global.css";
 
@@ -8,6 +9,12 @@ const queryClient = new QueryClient();
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+// Set the animation options. This is Optional.
+SplashScreen.setOptions({
+  duration: 400,
+  fade: true,
+});
 
 export default function RootLayout() {
   const [fontsLoaded, error] = useFonts({
