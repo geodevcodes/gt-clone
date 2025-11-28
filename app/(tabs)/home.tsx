@@ -3,8 +3,11 @@ import { featuresData } from "@/lib/data/featuresData";
 import { shortcutData } from "@/lib/data/shortcutData";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Entypo from "@expo/vector-icons/Entypo";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Octicons from "@expo/vector-icons/Octicons";
+import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
   Dimensions,
@@ -20,6 +23,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const Home = () => {
   const { width } = Dimensions.get("window");
   const [hiddenBalance, setHiddenBalance] = useState(true);
+  const router = useRouter();
   return (
     <SafeAreaView className="px-5 pt-6 pb-8 bg-[#F9F9F9] h-full">
       <View className="flex flex-row items-center justify-between pb-4">
@@ -105,8 +109,34 @@ const Home = () => {
           )}
         />
 
+        <View className="mt-10">
+          <View className="flex flex-row justify-between items-center mb-4">
+            <Text className="text-black font-bold text-xl">
+              Transaction history
+            </Text>
+
+            <TouchableOpacity
+              onPress={() => router.push("/(others)/transactions")}
+            >
+              <View className="flex flex-row items-center gap-3">
+                <Text className="text-gray-500 text-sm">See more</Text>
+                <Ionicons name="chevron-forward" size={14} color="black" />
+              </View>
+            </TouchableOpacity>
+          </View>
+          <View className="bg-white border border-slate-200 p-3 pt-4 pl-4 rounded-lg">
+            <Text className="text-gray-400">Latest transactions</Text>
+            <View className="flex flex-row gap-3 items-center">
+              <View className="border border-gray-200 my-4 rounded-full flex items-center justify-center w-12 h-12">
+                <FontAwesome name="clock-o" size={24} color="#6b7280" />
+              </View>
+              <Text className="text-gray-400">No past transactions</Text>
+            </View>
+          </View>
+        </View>
+
         <View className="my-10">
-          <Text className="text-black font-bold text-2xl mb-4">Shortcuts</Text>
+          <Text className="text-black font-bold text-xl mb-4">Shortcuts</Text>
           <FlatList
             data={shortcutData}
             horizontal
@@ -137,7 +167,7 @@ const Home = () => {
           renderItem={({ item }) => (
             <View className="flex flex-col mb-4">
               <View>
-                <Text className="text-black font-bold text-2xl my-3">
+                <Text className="text-black font-bold text-xl my-3">
                   {item.name}
                 </Text>
                 <View className="border border-slate-200 rounded-lg pb-5">
@@ -163,6 +193,18 @@ const Home = () => {
             </View>
           )}
         />
+
+        <View className="flex flex-row gap-2 items-center justify-start  border border-slate-200 px-3 mt-3 rounded-lg">
+          <View className="border border-gray-200 bg-[#FEE2E2] my-4 rounded-full flex items-center justify-center w-10 h-10">
+            <AntDesign name="trademark" size={16} color="#DC2626" />
+          </View>
+          <View className="flex-1">
+            <Text className="text-gray-400 text-xs pr-3">
+              Banking services powered by geodevcodes, Licensed by Central Bank
+              of geodevcodes (CBG)
+            </Text>
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
