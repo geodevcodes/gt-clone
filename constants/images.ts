@@ -1,5 +1,6 @@
 import comingsoon from "@/assets/images/comingsoon.jpeg";
 import trash from "@/assets/images/empty.png";
+import emptybox from "@/assets/images/emptybox.jpeg";
 import gtcontribution from "@/assets/images/gtcontribution.jpeg";
 import gtdollarfund from "@/assets/images/gtdollarfund.jpeg";
 import gtfund from "@/assets/images/gtfund.jpeg";
@@ -18,4 +19,5 @@ export default {
   gtrsa,
   gtcontribution,
   gtresidential,
+  emptybox,
 };
