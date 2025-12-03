@@ -67,7 +67,7 @@ const AccountTransfer = () => {
   );
 
   return (
-    <SafeAreaView className="px-8 pt-4 pb-2">
+    <SafeAreaView className="px-5 pt-4 pb-2">
       <View className="">
         <TouchableOpacity
           onPress={() => router.back()}
@@ -157,14 +157,14 @@ const AccountTransfer = () => {
               .sort()
               .map((letter) => (
                 <View key={letter}>
-                  <View className="px-4 mt-4">
-                    <Text className="text-lg font-bold">{letter}</Text>
+                  <View className="mt-4">
+                    <Text className="text-lg font-semibold">{letter}</Text>
                   </View>
 
                   {groupedData[letter].map((item) => (
                     <TouchableOpacity
                       key={item.id}
-                      className="flex flex-row items-center justify-between py-3 px-4 mt-3 rounded-xl"
+                      className="flex flex-row items-center justify-between py-3 mt-2 rounded-xl"
                     >
                       <View className="flex flex-row items-center gap-3">
                         <View
