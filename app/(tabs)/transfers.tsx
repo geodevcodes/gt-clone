@@ -96,7 +96,7 @@ const Transfers = () => {
         contentContainerStyle={{ paddingBottom: 120 }}
       >
         {/* Create New */}
-        <View className="mt-10 mb-2 gap-3">
+        <View className="mt-6 mb-2 gap-3">
           <Text className="text-xl font-bold">Create new</Text>
           <View>
             {transfersData.map((item, index) => (
@@ -127,7 +127,7 @@ const Transfers = () => {
         </View>
 
         {/* Beneficiaries */}
-        <View className="mt-10 mb-2 gap-3">
+        <View className="mt-7 mb-2 gap-3">
           <Text className="text-xl font-bold">Beneficiaries</Text>
           <View>
             <Filters />

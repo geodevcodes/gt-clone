@@ -32,7 +32,7 @@ const Search = ({ placeholder }: SearchProps) => {
           onChangeText={handleSearch}
           placeholder={placeholder}
           style={{ paddingVertical: 0 }}
-          className="text-sm font-rubik text-black ml-2 flex-1 "
+          className="text-sm font-rubik placeholder:text-gray-400 ml-2 flex-1 "
         />
       </View>
     </View>

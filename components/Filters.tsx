@@ -22,7 +22,7 @@ const Filters = () => {
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
-      className="mt-3 mb-2"
+      className="mt-1.5 mb-2"
     >
       {beneficiariesFilters.map((item, index) => (
         <TouchableOpacity
