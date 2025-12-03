@@ -6,6 +6,7 @@ import {
 } from "@/lib/data/transfersData";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Dimensions, Text, TouchableOpacity, View } from "react-native";
 import Animated, {
@@ -19,6 +20,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const { width } = Dimensions.get("window");
 
 const Transfers = () => {
+  const router = useRouter();
   const scrollY = useSharedValue(0);
 
   const scrollHandler = useAnimatedScrollHandler({
@@ -99,7 +101,7 @@ const Transfers = () => {
           <View>
             {transfersData.map((item, index) => (
               <TouchableOpacity
-                onPress={() => {}}
+                onPress={() => router.push(item.href as any)}
                 key={index}
                 className="flex flex-row items-center justify-between py-3 px-4 mt-3 rounded-xl bg-white border border-gray-200"
               >

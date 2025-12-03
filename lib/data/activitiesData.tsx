@@ -7,6 +7,7 @@ export const activitiesData = [
     id: "fund_1",
     name: "Fund account",
     icon: <AntDesign name="plus-circle" size={18} color="#ff6600" />,
+    href: "/(others)/funding-source",
   },
   {
     id: "transfer_2",
@@ -18,10 +19,19 @@ export const activitiesData = [
         color="#ff6600"
       />
     ),
+    href: "/(others)/account-transfer",
   },
   {
     id: "account_3",
     name: "Account details",
-    icon: <MaterialIcons name="bar-chart" size={24} color="#ff6600" className="rotate-180" />,
+    icon: (
+      <MaterialIcons
+        name="bar-chart"
+        size={24}
+        color="#ff6600"
+        className="rotate-180"
+      />
+    ),
+    href: "/(others)/account-details",
   },
 ];

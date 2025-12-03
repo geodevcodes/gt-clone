@@ -10,7 +10,6 @@ import Octicons from "@expo/vector-icons/Octicons";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
-  Dimensions,
   FlatList,
   Image,
   ScrollView,
@@ -21,7 +20,6 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
-  const { width } = Dimensions.get("window");
   const [hiddenBalance, setHiddenBalance] = useState(true);
   const router = useRouter();
   return (
@@ -91,23 +89,20 @@ const Home = () => {
           )}
         </View>
 
-        <FlatList
-          data={activitiesData}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <View
-              style={{ width: width * 0.4, marginRight: 10, height: 50 }}
-              className="mt-6 bg-[#f1dcce] border-[0.3px] border-[#ff6600] rounded-3xl flex flex-row items-center justify-center gap-3"
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {activitiesData.map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => router.push(item.href as any)}
+              className="mt-6 mr-3 px-7 py-3.5  bg-[#f1dcce] border-[0.3px] border-[#ff6600] rounded-3xl flex flex-row items-center justify-center gap-3"
             >
               {item.icon}
               <Text className="text-[#ff6600] font-bold text-center">
                 {item.name}
               </Text>
-            </View>
-          )}
-        />
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
 
         <View className="mt-10">
           <View className="flex flex-row justify-between items-center mb-4">
@@ -137,13 +132,13 @@ const Home = () => {
 
         <View className="my-10">
           <Text className="text-black font-bold text-xl mb-4">Shortcuts</Text>
-          <FlatList
-            data={shortcutData}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            keyExtractor={(item) => item.id}
-            renderItem={({ item }) => (
-              <View className="flex flex-col justify-center items-center mr-5">
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {shortcutData.map((item, index) => (
+              <TouchableOpacity
+                key={index}
+                // onPress={() => console.log("You clicked me!")}
+                className="flex flex-col justify-center items-center mr-5"
+              >
                 <View
                   style={{
                     backgroundColor: item.bg,
@@ -155,9 +150,9 @@ const Home = () => {
                   {item.icon}
                 </View>
                 <Text className="text-slate-500 text-base">{item.name}</Text>
-              </View>
-            )}
-          />
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
         </View>
 
         <FlatList

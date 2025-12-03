@@ -45,6 +45,10 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="(others)/transactions" options={{ headerShown: false }} />
+        <Stack.Screen name="(others)/account-transfer" options={{ headerShown: false }} />
+        <Stack.Screen name="(others)/fx-transfer" options={{ headerShown: false }} />
+        <Stack.Screen name="(others)/fx-sales" options={{ headerShown: false }} />
+        <Stack.Screen name="(others)/account-details" options={{ headerShown: false }} />
         <Stack.Screen name="(others)/funding-source" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="index" options={{ headerShown: false }} />

@@ -10,6 +10,7 @@ export const transfersData = [
     bg: "#F3E8FF",
     borderColor: "#DDD6FE",
     icon: <AntDesign name="user" size={20} color="#A855F7" />,
+    href: "(others)/account-transfer",
   },
   {
     id: "fxtransfer_otherbanks_2",
@@ -17,6 +18,7 @@ export const transfersData = [
     bg: "#E0F2FE",
     borderColor: "#BAE6FD",
     icon: <Fontisto name="world-o" size={20} color="#0284C7" />,
+    href: "(others)/fx-transfer",
   },
   {
     id: "fx_sales_3",
@@ -30,6 +32,7 @@ export const transfersData = [
         color="#16A34A"
       />
     ),
+    href: "(others)/fx-sales",
   },
 ];
 
