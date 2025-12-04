@@ -6,6 +6,7 @@ import gtdollarfund from "@/assets/images/gtdollarfund.jpeg";
 import gtfund from "@/assets/images/gtfund.jpeg";
 import gtresidential from "@/assets/images/gtresidential.jpeg";
 import gtrsa from "@/assets/images/gtrsa.jpeg";
+import brandLogo from "@/assets/images/icon.png";
 import loan from "@/assets/images/loan.jpeg";
 import pension from "@/assets/images/pension.jpeg";
 
@@ -20,4 +21,5 @@ export default {
   gtcontribution,
   gtresidential,
   emptybox,
+  brandLogo,
 };
