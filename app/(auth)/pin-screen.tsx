@@ -32,7 +32,7 @@ const PinScreen = () => {
   ];
 
   return (
-    <SafeAreaView className="flex items-center justify-between h-screen bg-[#ECEEF2] pt-20">
+    <SafeAreaView className="flex items-center justify-between h-full bg-[#ECEEF2] pt-20">
       <View className="flex items-center">
         {/* User Icon */}
         <View className="w-20 h-20 rounded-full bg-white items-center justify-center mb-6">
