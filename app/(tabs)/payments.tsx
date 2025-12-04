@@ -1,5 +1,6 @@
 import { paymentData } from "@/lib/data/paymentData";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Dimensions, Text, TouchableOpacity, View } from "react-native";
 import Animated, {
@@ -13,6 +14,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const { width } = Dimensions.get("window");
 
 const Payments = () => {
+  const router = useRouter();
   const scrollY = useSharedValue(0);
 
   const scrollHandler = useAnimatedScrollHandler({
@@ -61,7 +63,7 @@ const Payments = () => {
         <View className="flex flex-col mt-4">
           {paymentData.map((item, index) => (
             <TouchableOpacity
-              onPress={() => {}}
+              onPress={() => router.push(`/(others)/payments-details/${item.id}`)}
               key={index}
               className="flex flex-row items-center justify-between py-3"
             >

@@ -50,12 +50,9 @@ export default function RootLayout() {
         <Stack.Screen name="(others)/fx-sales" options={{ headerShown: false }} />
         <Stack.Screen name="(others)/account-details" options={{ headerShown: false }} />
         <Stack.Screen name="(others)/funding-source" options={{ headerShown: false }} />
+        <Stack.Screen name="(others)/payments-details/[id]" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        {/* <Stack.Screen
-          name="movie-details/[id]"
-          options={{ headerShown: false }}
-        /> */}
         {/* <Stack.Screen name="modal" options={{ presentation: 'modal' }} /> */}
       </Stack>
       <StatusBar style="auto" animated backgroundColor="#ff6600" />

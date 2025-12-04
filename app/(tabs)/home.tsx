@@ -136,7 +136,7 @@ const Home = () => {
             {shortcutData.map((item, index) => (
               <TouchableOpacity
                 key={index}
-                // onPress={() => console.log("You clicked me!")}
+                onPress={() => router.push(item.href as any)}
                 className="flex flex-col justify-center items-center mr-5"
               >
                 <View
