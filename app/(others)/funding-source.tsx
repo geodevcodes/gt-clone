@@ -1,5 +1,5 @@
 import { fundingData } from "@/lib/data/fundingData";
-import AntDesign from "@expo/vector-icons/AntDesign";
+import Entypo from "@expo/vector-icons/Entypo";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRouter } from "expo-router";
@@ -11,7 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const FundingSource = () => {
   const router = useRouter();
   return (
-    <SafeAreaView className="px-8 pt-4 pb-2">
+    <SafeAreaView className="px-5 pt-4 pb-2">
       <TouchableOpacity
         onPress={() => router.back()}
         activeOpacity={0.7}
@@ -35,18 +35,28 @@ const FundingSource = () => {
       >
         {/* Beneficiaries */}
         <View className="mt-4 mb-2 gap-3">
-          <Text className="text-sm text-gray-600">Account credentiaals</Text>
-          {/* Allow Access */}
-          <View className="bg-white border border-slate-200 p-3 pt-4 pl-4 rounded-lg">
-            <View className="flex flex-col gap-3 items-center">
-              <AntDesign name="user" size={24} color="#6b7280" />
-              <Text className="text-black/90 text-sm">
-                To use your contacts, allow the app to access your contacts.
-              </Text>
+          <Text className="text-sm text-gray-600">Account credentials</Text>
+          <View className="bg-white border border-slate-200 p-4 gap-4 rounded-lg">
+            <View className="flex flex-row items-center justify-between">
+              <View className="gap-2">
+                <Text className="text-sm text-gray-500">Beneficiary</Text>
+                <Text className="text-sm text-gray-600">
+                  Rasheed Taiwo Olatunde
+                </Text>
+              </View>
+              <TouchableOpacity
+                onPress={() => console.log("You clicked share!")}
+                className=""
+              >
+                <Entypo name="share" size={20} color="#ff6600" />
+              </TouchableOpacity>
             </View>
-            <Text className="text-center text-[#ff6600] font-semibold mt-5 mb-1">
-              Allow access
-            </Text>
+            <View className="flex flex-row items-center justify-between">
+              <View className="gap-2">
+                <Text className="text-sm text-gray-500">Account number</Text>
+                <Text className="text-sm text-gray-600">0198872763</Text>
+              </View>
+            </View>
           </View>
         </View>
 
